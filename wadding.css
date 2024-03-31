@@ -1,16 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif, serif;
     direction: rtl;
     text-align: right;
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
 }
-
-h1 {
+h1
+{
+    font-family: 'Times New Roman', serif;
     color: #333;
 }
-
+#are_come
+{
+    text-align: center;
+    font-size: large;   
+    font-weight: bold;
+    padding-bottom: 10%;
+}
 form {
     background-color: #fff;
     padding: 20px;
@@ -24,10 +31,9 @@ label {
     margin-bottom: 10px;
     font-weight: bold;
 }
-
 input[type="text"]
 {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -35,6 +41,29 @@ input[type="text"]
     box-sizing: border-box;
     font-size: 16px;
 }
+#comment
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;   
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+input[type="number"]
+{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
 
 button[type="submit"] {
     background-color: #007bff;
@@ -45,7 +74,6 @@ button[type="submit"] {
     cursor: pointer;
     font-size: 16px;
 }
-
 #loading {
     display: none;
     width: 50px;
@@ -54,27 +82,116 @@ button[type="submit"] {
     border-top: 5px solid #3498db;
     border-radius: 50%;
     animation: spin 2s linear infinite;
-    position: absolute;
+    position:fixed ;
     top: 50%;
     left: 50%;
     margin-top: -25px;
     margin-left: -25px;
 }
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
-@keyframes spin {
+@keyframes spin 
+{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+.center 
+{
+    text-align: center;
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation ease-in 1s forwards;
+}
+
 
 #result {
-    color: green;
+    color: rgb(40, 36, 16);
     font-weight: bold;
     margin-top: 10px;
     font-size: 25px;
-    background-color: #fff;
+    background-color: #94e07bbe;
     padding: 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     display: none;
+}
+
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+#waze-image {
+    width: 40px;
+    height: auto;
+    vertical-align: middle; 
+    margin-right: 10px; 
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#wadding-image
+{
+    width: 60%;
+    height: auto;
+    vertical-align: middle; 
+    margin-right: 10px; 
+    padding: 10px;
+    border-radius: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#date_and_time
+{
+    font-size: 20px;
+    border: #333;
+    font-weight: bold;
+    background-color: rgba(191, 229, 242, 0.534);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    margin: 10px auto;
+    width: 80%;
+    color: rgba(27, 6, 6, 0.838);
+}
+
+.time_block
+{
+    font-size: 18px;
+    font-family: 'Times New Roman', 'serif';
+    border: #333;
+    font-weight: bold;
+    background-color: rgba(208, 200, 185, 0.969);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: min-content;
+    display:inline-block ;
+}
+#link_waze
+{
+    font-size: 18px;
+    border: #333;
+    font-weight: bold;
+    background-color: rgba(166, 215, 232, 0.588);
+    padding: 1px;   
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1px;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
 }

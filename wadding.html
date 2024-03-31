@@ -1,28 +1,50 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>מגיעים? שמרו לכם מקום.</title>
-        <link rel="stylesheet" type="text/css" href="https://drive.google.com/file/d/1fIKWQoMGZJhIVinJbuP3dEQFCtzz63Oz/view?usp=sharing">
+        <meta property="og:title" content="החתונה של תומר ואילה">
+        <meta property="og:description" content="מוזמנים? כן! באים? תעדכנו :)">
+        <meta property="og:image" content="https://tomerpp.github.io/TomerAndAyalla/wadding.jpg">
+        <title>החתונה של תומר ואילה</title>
+        <link rel="stylesheet" type="text/css" href="wadding.css">
     </head>
     <body>
-
-    <h1>אז אתם באים?</h1>
-
-    <form id="customForm">
-        <label for="name">למי לשמור מקום?</label>
-        <input type="text" id="name" name="name" placeholder="רשמו שם שנדע שאלו אתם" maxlength="20" pattern="[א-ת\s]+" required><br><br>
-
-        <label for="places">כמה מקומות לשמור? (0=לא נגיע)</label>
-        <input type="number" id="places" name="places" placeholder="הזינו מספר" min="0" max="50" required><br><br>
-
-        <button type="submit">מאשרים הגעה!</button>
-    </form>
-
+        <div class="center fade-in">
+            <h1>החתונה של תומר ואילה</h1>
+            <img id="wadding-image" src="wadding.jpg" alt="<הייתה אמורה להיות כאן תמונה יפה, אבל משהו השתבש.>">    
+            <div id="link_waze">
+                <p>אולמי בלוודר</p>
+                <a href="https://www.waze.com/en/live-map/directions/%D7%91%D7%9C%D7%95%D7%95%D7%93%D7%A8,-%D7%90%D7%95%D7%9C%D7%9D-%D7%90%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%95%D7%9B%D7%A0%D7%A1%D7%99%D7%9D-%D7%94%D7%A2%D7%9E%D7%99%D7%AA-%D7%99%D7%A6%D7%97%D7%A7-1-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%9C%D7%A6%D7%99%D7%95%D7%9F?place=w.22806848.227740799.19895">
+                    <p>
+                        <span>העמית יצחק 1 ראשון לציון</span>
+                        <img src="waze.png" alt="" id="waze-image">
+                    </p>
+                </a>
+            </div>
+            
+            <p id="date_and_time">בתאריך 19.6.24 בשעה 19:30</p>
+            
+            
+        </div>
+        <div class="fade-in">
+            <form id="customForm">
+                <p id="are_come">אז אתם באים?</p>
+                <label for="name">למי לשמור מקום?</label>
+                <input type="text" id="name" name="name" placeholder="רשמו שם שנדע שאלו אתם" minlength="3" maxlength="30" pattern="[א-ת\s]+" required><br><br>
+                
+                <label for="places">כמה מקומות לשמור? (0=לא נגיע)</label>
+                <input type="number" id="places" name="places" placeholder="הזינו מספר" min="0" max="20" required><br><br>
+                
+                <label for="comment">הערות</label>
+                <input type="text" id="comment" name="comment" placeholder="רוצים להוסיף משהו?" maxlength="50" pattern="[א-ת0-9\s.,]+"><br><br>
+                <button type="submit">מאשרים הגעה!</button>
+            </form>
+        </div>
     <div id="loading"></div>
-
     <div id="result"></div>
-    <script>"https://drive.google.com/file/d/1GZA1tSaJiIZP9Z4GfQzYsarJokIk5YQq/view?usp=sharing"</script>
-    </body>
-    </html>
+    <script src="wadding.js"></script>
+    <div class="center fade-in" id="countdown"></div>
+</body>
+</html>
+
